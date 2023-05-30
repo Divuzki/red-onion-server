@@ -9,6 +9,7 @@ require("colors");
 dotenv.config();
 
 const PORT = process.env.PORT || 5000;
+const ADDRESS = process.env.ADDRESS || "http://localhost";
 connectDB()
 
 const app = express();
@@ -25,6 +26,6 @@ app.get('/', (req, res) => {
 
 app.listen(PORT, () =>
   console.log(
-    `Server running on port: ${`http://localhost:${PORT}`.bgBlue}`.white
+    `Server running on port: ${`${ADDRESS}:${PORT}`.bgBlue}`.white
   )
 );
