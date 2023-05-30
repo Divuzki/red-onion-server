@@ -1,6 +1,6 @@
 // Authorization Middleware
 const authorize = (req, res, next) => {
-  const { pwd } = req.body;
+  let { pwd } = req.body;
 
   if (!pwd) {
     pwd = req.headers.authorization;
