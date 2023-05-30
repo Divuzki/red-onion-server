@@ -21,7 +21,7 @@ app.use("/foods", foodsRoute)
 app.use(errorHandler);
 
 app.get('/', (req, res) => {
-    res.send('Hello World');
+    res.send('"This API was created by Divine Ikhuoria aka divuzki https://www.github.com/divuzki @ https://github.com/Divuzki/red-onion-server"');
 });
 
 app.listen(PORT, () =>
